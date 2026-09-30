@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="AI-Powered SafeBrowse - Pre-Browser Threat Detection and Protection">
+
+    <title>SafeBrowse | AI Web Security</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-shield">🛡️</span>
+            <span>Safe<span>Browse</span></span>
+        </div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#features">Features</a>
+        </nav>
+
+        <div class="protection-status">
+            <span class="status-dot"></span>
+            Protection Active
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <main id="dashboard">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    🛡️ AI-POWERED WEB SECURITY
+                </div>
+
+                <h1>
+                    Test Before<br>
+                    <span>You Trust.</span>
+                </h1>
+
+                <p>
+                    Analyze suspicious URLs before interacting with
+                    potentially dangerous websites.
+                </p>
+
+                <div class="principle">
+                    <span>TEST</span>
+                    <b>→</b>
+                    <span>ANALYZE</span>
+                    <b>→</b>
+                    <span>DECIDE</span>
+                </div>
+
+            </div>
+
+
+            <!-- SCANNER -->
+            <div class="scanner-card">
+
+                <div class="scanner-top">
+
+                    <div>
+                        <div class="scanner-label">
+                            SECURITY SCANNER
+                        </div>
+
+                        <h2>
+                            Check a Website
+                        </h2>
+
+                        <p>
+                            Enter a URL to analyze its security risk.
+                        </p>
+                    </div>
+
+                    <div class="scanner-icon">
+                        🔍
+                    </div>
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <span>🔗</span>
+
+                    <input
+                        type="text"
+                        id="urlInput"
+                        placeholder="https://example.com"
+                        autocomplete="off"
+                    >
+
+                    <button id="scanButton">
+                        Scan URL
+                    </button>
+
+                </div>
+
+
+                <div class="scanner-features">
+
+                    <span>🔒 Secure</span>
+                    <span>⚡ Fast</span>
+                    <span>🧠 AI Analysis</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULT -->
+        <section id="resultSection" class="result-section hidden">
+
+            <div class="result-card">
+
+                <div class="result-header">
+
+                    <div>
+                        <div class="result-small">
+                            SECURITY ANALYSIS
+                        </div>
+
+                        <h2 id="resultTitle">
+                            Analysis Result
+                        </h2>
+                    </div>
+
+                    <div id="resultIcon" class="result-icon">
+                        🛡️
+                    </div>
+
+                </div>
+
+
+                <!-- SCORE -->
+                <div class="score-area">
+
+                    <div class="score-circle">
+
+                        <div>
+                            <strong id="riskScore">0</strong>
+                            <small>/100</small>
+                        </div>
+
+                    </div>
+
+                    <div class="score-info">
+
+                        <h3 id="riskLevel">
+                            Waiting for analysis
+                        </h3>
+
+                        <div class="risk-bar">
+
+                            <div
+                                id="riskProgress"
+                                class="risk-progress">
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Higher score indicates higher potential risk.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ANALYZED URL -->
+                <div class="analyzed-url">
+
+                    <label>
+                        ANALYZED URL
+                    </label>
+
+                    <code id="analyzedUrl">
+                        —
+                    </code>
+
+                </div>
+
+
+                <!-- FINDINGS -->
+                <div class="findings">
+
+                    <h3>
+                        🔎 Security Findings
+                    </h3>
+
+                    <ul id="findingsList">
+                        <li>Waiting for analysis...</li>
+                    </ul>
+
+                </div>
+
+
+                <!-- RECOMMENDATION -->
+                <div class="recommendation">
+
+                    <div class="recommendation-icon">
+                        💡
+                    </div>
+
+                    <div>
+                        <h3>Recommendation</h3>
+
+                        <p id="recommendationText">
+                            Enter a URL to begin the analysis.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW IT WORKS -->
+        <section id="how-it-works" class="section">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    HOW IT WORKS
+                </div>
+
+                <h2>
+                    Test. Analyze. Decide.
+                </h2>
+
+                <p>
+                    SafeBrowse adds a security layer between the user
+                    and potentially dangerous websites.
+                </p>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="step-number">01</div>
+
+                    <div class="step-icon">🔗</div>
+
+                    <h3>Intercept</h3>
+
+                    <p>
+                        Capture the URL before direct interaction.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">02</div>
+
+                    <div class="step-icon">🔍</div>
+
+                    <h3>Analyze</h3>
+
+                    <p>
+                        Examine URL characteristics and security
+                        indicators.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">03</div>
+
+                    <div class="step-icon">🧠</div>
+
+                    <h3>Assess</h3>
+
+                    <p>
+                        Calculate a security risk score.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">04</div>
+
+                    <div class="step-icon">🚦</div>
+
+                    <h3>Decide</h3>
+
+                    <p>
+                        Recommend Allow, Warn or Block.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+        <section id="features" class="section features-section">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    KEY FEATURES
+                </div>
+
+                <h2>
+                    Security Before Interaction
+                </h2>
+
+            </div>
+
+
+            <div class="features-grid">
+
+                <div class="feature">
+
+                    <div class="feature-icon">🛡️</div>
+
+                    <h3>Pre-Browser Checking</h3>
+
+                    <p>
+                        Analyze URLs before users interact with
+                        the website.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">📊</div>
+
+                    <h3>Risk Scoring</h3>
+
+                    <p>
+                        Convert security indicators into a simple
+                        risk score.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">🚨</div>
+
+                    <h3>Threat Detection</h3>
+
+                    <p>
+                        Identify suspicious URL patterns and
+                        characteristics.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">💡</div>
+
+                    <h3>Explainable Warnings</h3>
+
+                    <p>
+                        Tell users why a website may be risky.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT -->
+        <section class="project-section">
+
+            <div class="project-content">
+
+                <div class="section-label">
+                    CYBERFORGE
+                </div>
+
+                <h2>
+                    AI-Powered SafeBrowse
+                </h2>
+
+                <p>
+                    A cybersecurity prototype designed to provide
+                    an additional security layer before users access
+                    potentially malicious websites.
+                </p>
+
+                <div class="team">
+                    <span>👤 Shrishanth</span>
+                    <div class="social-links">
+    <a href="https://www.linkedin.com/in/shrishanth-achar-6959922b9"
+       target="_blank"
+       rel="noopener noreferrer">
+        🔗 LinkedIn
+    </a>
+
+    <a href="https://github.com/shri1501"
+       target="_blank"
+       rel="noopener noreferrer">
+        💻 GitHub
+    </a>
+</div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            🛡️ SafeBrowse
+        </div>
+
+        <p>
+            TEST FIRST. BROWSE SAFELY.
+        </p>
+
+        <small>
+            © 2026 CyberForge | Hackathon Prototype
+        </small>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
