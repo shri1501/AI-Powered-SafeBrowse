@@ -1185,3 +1185,42 @@ footer small {
     border-color: #00e5ff;
     transform: translateY(-2px);
 }
+.button-group {
+    display: flex;
+    gap: 8px;
+}
+
+#clearButton {
+    padding: 13px 18px;
+
+    border: 1px solid #30445a;
+    border-radius: 8px;
+
+    background: #101d2c;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+#clearButton:hover {
+    background: #18293c;
+    border-color: #00aeca;
+    color: #00e5ff;
+}
+
+@media (max-width: 650px) {
+    .button-group {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #scanButton,
+    #clearButton {
+        width: 100%;
+    }
+}

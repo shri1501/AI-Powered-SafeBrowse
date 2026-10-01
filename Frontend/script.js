@@ -11,6 +11,8 @@
 
 const urlInput = document.getElementById("urlInput");
 const scanButton = document.getElementById("scanButton");
+const clearButton = document.getElementById("clearButton");
+clearButton.addEventListener("click", clearScanner);
 
 const resultSection = document.getElementById("resultSection");
 
@@ -827,4 +829,47 @@ async function saveScanToBackend(url, analysis) {
     } catch (error) {
         console.error("❌ Backend connection failed:", error);
     }
+}
+function clearScanner() {
+
+    // Clear URL input
+    urlInput.value = "";
+
+    // Hide previous result
+    resultSection.classList.add("hidden");
+
+    // Reset result title
+    resultTitle.textContent = "Analysis Result";
+
+    // Reset icon
+    resultIcon.textContent = "🛡️";
+
+    // Reset score
+    riskScore.textContent = "0";
+
+    // Reset risk level
+    riskLevel.textContent = "Waiting for analysis";
+
+    // Reset progress bar
+    riskProgress.style.width = "0%";
+    riskProgress.style.background = "#00e5ff";
+
+    // Reset analyzed URL
+    analyzedUrl.textContent = "—";
+
+    // Reset findings
+    findingsList.innerHTML = `
+        <li>Waiting for analysis...</li>
+    `;
+
+    // Reset recommendation
+    recommendationText.textContent =
+        "Enter a URL to begin the security analysis.";
+
+    // Enable scan button
+    scanButton.disabled = false;
+    scanButton.textContent = "Scan URL";
+
+    // Focus input
+    urlInput.focus();
 }
